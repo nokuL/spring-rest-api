@@ -1,0 +1,14 @@
+<div class="container">
+  <form (ngSubmit)="processDishForm()">
+    <div class=" form-group">
+      <label for="name">Dish Name</label>
+      <input type="text" id = "name" name="food" class="form-control" [(ngModel)]="dish.food">
+    </div>
+    <div class="form-group">
+      <label for="price">Dish Price</label>
+      <input type="text"  id = "price" name="price" class="form-control" [(ngModel)]="dish.dishPrice">
+    </div>
+    <br>
+    <input type="submit" value="Save" class="btn btn-success">
+  </form>
+</div>

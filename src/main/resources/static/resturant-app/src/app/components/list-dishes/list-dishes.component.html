@@ -1,0 +1,19 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead >
+    <th>Name</th>
+    <th>Price</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let dish of dishes">
+      <td>{{dish.food}}</td>
+      <td>{{dish.dishPrice}}</td>
+      <td><button class="btn btn-primary"(click)="updateDish(dish)">Edit</button></td>
+      <td><button class="btn btn-danger" (click)="deleteDish(dish)">Delete</button></td>
+
+    </tr>
+    </tbody>
+  </table>
+  <br>
+    <button class="btn btn-primary" (click)="createDish()">Add Dish</button>
+</div>
