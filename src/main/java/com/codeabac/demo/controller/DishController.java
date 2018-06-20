@@ -29,13 +29,13 @@ public class DishController {
         return  dishRepository.findById(id).get();
 
     }
-    @RequestMapping(value = "/dish"   ,method = RequestMethod.POST )
-     public Dish createDish( Dish dish){
+    @RequestMapping(value = "/dish"   ,method = RequestMethod.POST , headers = "Accept=application/json")
+     public Dish createDish(@RequestBody Dish dish){
               return dishRepository.save(dish);
 
     }
-    @RequestMapping(value = "/dish"  , method = RequestMethod.PUT )
-    public void updateDish(  Dish dish){
+    @RequestMapping(value = "/dish"  , method = RequestMethod.PUT , headers = "Accept=application/json")
+    public void updateDish(@RequestBody  Dish dish){
       dishRepository.save(dish);
     }
 

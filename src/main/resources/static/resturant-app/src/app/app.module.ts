@@ -23,8 +23,9 @@ const appRoutes:Routes=[
   {path:'editDish' , component: DishFormComponent },
   {path:'dishes', component:ListDishesComponent},
   {path:'menu' , component: MenuFormComponent},
-  {path:'dishCategory', component: DishCategoryFormComponent},
-  {path:'dishCategories', component:ListDishCategoriesComponent}
+  {path:'editDishCategory', component: DishCategoryFormComponent},
+  {path:'dishCategories', component:ListDishCategoriesComponent},
+
 
   ];
 

@@ -8,6 +8,14 @@
       <label for="price">Dish Price</label>
       <input type="text"  id = "price" name="price" class="form-control" [(ngModel)]="dish.dishPrice">
     </div>
+    <div class="form-group">
+      <label for="dishCategory">Category</label>
+      <select id="dishCategory" name="dishCategory" class="form-control" [(ngModel)]="dish.dishCategory">
+        <option *ngFor="let dishCategory of dishCategories" [value]="dishCategory.id">
+          {{dishCategory.name}}
+        </option>
+      </select>
+    </div>
     <br>
     <input type="submit" value="Save" class="btn btn-success">
   </form>

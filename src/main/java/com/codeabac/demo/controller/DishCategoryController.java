@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin
 @RestController
 public class DishCategoryController {
 
@@ -26,11 +26,11 @@ public class DishCategoryController {
     }
 
     @RequestMapping(value = "/dishCategory", method = RequestMethod.POST)
-    public DishCategory createDishCategory(DishCategory dishCategory){
+    public DishCategory createDishCategory(@RequestBody DishCategory dishCategory){
         return dishCategoryRepository.save(dishCategory);
     }
     @RequestMapping(value = "/dishCategory", method = RequestMethod.PUT)
-    public DishCategory updateCategory(DishCategory dishCategory){
+    public DishCategory updateCategory(@RequestBody DishCategory dishCategory){
         return  dishCategoryRepository.save(dishCategory);
     }
 

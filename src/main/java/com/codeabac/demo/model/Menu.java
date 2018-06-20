@@ -14,6 +14,9 @@ public class Menu {
     private Set<Dish> dish = new HashSet<>();
     private Double totalPrice;
 
+    public Menu() {
+    }
+
     public Long getId() {
         return id;
     }

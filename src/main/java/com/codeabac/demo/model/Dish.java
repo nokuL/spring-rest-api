@@ -24,6 +24,9 @@ public class Dish {
     @OneToOne
     private DishCategory dishCategory;
 
+    public Dish() {
+    }
+
     public Long getId() {
         return id;
     }

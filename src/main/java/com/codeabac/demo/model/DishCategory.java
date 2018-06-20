@@ -11,6 +11,13 @@ public class DishCategory  {
     private Long id;
     private String name;
 
+    public DishCategory() {
+    }
+
+    public DishCategory(String name) {
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }

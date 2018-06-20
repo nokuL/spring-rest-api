@@ -23,6 +23,23 @@ export class ListDishCategoriesComponent implements OnInit {
   );
 
 }
+deleteDishCategory( dishCategory){
+     this.dishCategoryService.deleteDishCategory(dishCategory.id).subscribe((data)=>{
+       this.dishCategories.splice(this.dishCategories.indexOf(dishCategory), 1);
+     }, (error)=>{
+       console.log(error)
+     })
+  this.router.navigate(['/dishCategories'])
+}
+updateDishCategory(dishCategory){
+     this.dishCategoryService.setter(dishCategory);
+     this.router.navigate(['/editDishCategory'])
+}
+createDishCategory(){
+     let dishCategory = new DishCategory()
+     this.dishCategoryService.setter(dishCategory);
+     this.router.navigate(['/editDishCategory'])
+}
 
 
 }

@@ -1,16 +1,16 @@
 <div class="container">
-  <table>
+  <table class="table table-striped">
     <thead >
     <th class="font-weight-bold">Name</th>
     </thead>
     <tbody>
      <tr *ngFor="let dishCategory of dishCategories">
        <td >{{dishCategory.name}}</td>
-       <td><button class="btn btn-primary">Edit</button></td>
-       <td><button class="btn btn-danger">Delete</button></td>
+       <td><button class="btn btn-primary"(click)="updateDishCategory(dishCategory)">Edit</button></td>
+       <td><button class="btn btn-danger" (click)="deleteDishCategory(dishCategory)" >Delete</button></td>
      </tr>
     </tbody>
   </table>
   <br>
-  <button class="btn btn-primary">Add New Category</button>
+  <button class="btn btn-primary" (click)="createDishCategory()">Add New Category</button>
 </div>

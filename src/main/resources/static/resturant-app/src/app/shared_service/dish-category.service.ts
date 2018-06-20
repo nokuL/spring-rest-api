@@ -14,6 +14,7 @@ export class DishCategoryService {
 
   });
   private options = new RequestOptions(this.headers);
+  private dishCategory:DishCategory;
 
   constructor(private http:Http){ }
          getDishCategories(){
@@ -36,6 +37,12 @@ export class DishCategoryService {
         }
         errorHandler(error: Response){
           return observable.throw(error|| "SERVER ERROR")
+        }
+        setter(dishCategory:DishCategory){
+        this.dishCategory = dishCategory;
+        }
+        getter(){
+        return this.dishCategory;
         }
 
 }
