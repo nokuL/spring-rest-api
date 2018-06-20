@@ -17,9 +17,10 @@ import { DishCategoryFormComponent } from './components/dish-category-form/dish-
  import {MenuService} from "./shared_service/menu.service";
  import {DishCategoryService} from "./shared_service/dish-category.service";
  import {DishService} from "./shared_service/dish.service";
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 const appRoutes:Routes=[
-  {path:'' , component: ListMenusComponent},
+  {path:'' , component: HomePageComponent},
   {path:'editDish' , component: DishFormComponent },
   {path:'dishes', component:ListDishesComponent},
   {path:'menu' , component: MenuFormComponent},
@@ -41,7 +42,8 @@ const appRoutes:Routes=[
     DishFormComponent,
     MenuFormComponent,
     DishComponent,
-    DishCategoryFormComponent
+    DishCategoryFormComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
